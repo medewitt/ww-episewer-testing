@@ -2,6 +2,7 @@ library(EpiSewer)
 library(data.table)
 library(cmdstanr)
 library(here)
+library(EpiNow2)
 
 # Raw data ------------------------------------------
 
@@ -76,3 +77,4 @@ cowplot::ggsave2(plot = f_concentration, here::here("output", "concentration.pdf
 f_re <- plot_R(ww_result)
 
 cowplot::ggsave2(plot = f_re, here::here("output", "reproduction_number.pdf"), height = 8, width = 14)
+
