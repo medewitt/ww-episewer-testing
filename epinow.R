@@ -12,7 +12,8 @@ dat_raw <- fread("https://raw.githubusercontent.com/conedatascience/covid-data/m
 
 ww_range <- as.IDate(c("2021-07-07", "2022-02-02"))
 
-dat_forsyth <- dat_raw[county=="Forsyth"][between(date, ww_range[1], ww_range[2])]
+# Give myself a bigger window 
+dat_forsyth <- dat_raw[county=="Forsyth"][between(date, ww_range[1]-30, ww_range[2])]
 
 dat_forsyth
 
